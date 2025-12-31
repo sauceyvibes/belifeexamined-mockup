@@ -1,0 +1,45 @@
+{
+  "name": "Article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "islam",
+        "atheism",
+        "christianity"
+      ],
+      "description": "Which belief system this article addresses"
+    },
+    "argument_type": {
+      "type": "string",
+      "enum": [
+        "bad",
+        "strong"
+      ],
+      "description": "Whether this debunks a bad argument or presents a strong one"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary of the article"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full article content in markdown"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Cover image for the article"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "argument_type",
+    "content"
+  ]
+}
