@@ -1,0 +1,56 @@
+{
+  "name": "Quiz",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Quiz title"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "islam",
+        "atheism",
+        "christianity"
+      ],
+      "description": "Which belief system this quiz covers"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the quiz"
+    },
+    "questions": {
+      "type": "array",
+      "description": "Quiz questions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_index": {
+            "type": "number"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Cover image for the quiz"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "questions"
+  ]
+}
