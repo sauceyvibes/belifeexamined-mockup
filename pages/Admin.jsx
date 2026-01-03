@@ -17,7 +17,7 @@ export default function Admin() {
   const [editingItem, setEditingItem] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  // Fetch all articles and quizzes
+  //  Fetch all articles and quizzes
   const { data: articles = [], isLoading: articlesLoading } = useQuery({
     queryKey: ['articles'],
     queryFn: () => base44.entities.Article.list('-created_date'),
@@ -466,4 +466,5 @@ export default function Admin() {
       </Dialog>
     </div>
   );
+
 }
